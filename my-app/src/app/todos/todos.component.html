@@ -1,0 +1,5 @@
+<!-- Loop through the array to show the todos -->
+<div *ngFor="let todo of todos; let i = index" class="todo">
+    <div class="id">{{ i }}</div>
+    <div class="context">{{ todo.content }}</div>
+</div>
