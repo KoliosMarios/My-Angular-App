@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    background-color: blueviolet;
+}
