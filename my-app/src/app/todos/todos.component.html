@@ -1,5 +1,18 @@
-<!-- Loop through the array to show the todos -->
-<div *ngFor="let todo of todos; let i = index" class="todo">
+<div class="todos">
+  <!-- Form to add todos -->
+  <form (submit)="addTodo()">
+    <input
+      type="text"
+      name="inputTodo"
+      placeholder="Enter Todo..."
+      class="todo-input"
+    [(ngModel)]="inputTodo"
+    />
+    <input type="submit" value="Add todo" class="todo-submit" />
+  </form>
+  <!-- Loop through the array to show the todos -->
+  <div *ngFor="let todo of todos; let i = index" class="todo">
     <div class="id">{{ i }}</div>
     <div class="context">{{ todo.content }}</div>
+  </div>
 </div>

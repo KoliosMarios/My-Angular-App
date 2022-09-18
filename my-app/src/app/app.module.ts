@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,16 +8,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    TodosComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, WelcomeComponent, TodosComponent],
+  imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
