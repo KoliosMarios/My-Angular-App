@@ -1,4 +1,6 @@
 <header>This is {{ title }}</header>
-<app-welcome></app-welcome>
-<app-todos></app-todos>
+<div class="nav">
+  <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+  <a class="nav-link" routerLink="todos" routerLinkActive="active">Todos</a>
+</div>
 <router-outlet></router-outlet>
