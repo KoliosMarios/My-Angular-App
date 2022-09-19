@@ -39,4 +39,10 @@ export class TodosComponent implements OnInit {
     //after the todo is pushed in the todos array we clear the input
     this.inputTodo = '';
   }
+
+  // we pass the id of the item we want to delete
+  deleteTodo(id: number) {
+    // we return only the todos that have different index than the id we pass in the function 
+    this.todos = this.todos.filter((todo, i) => i !== id);
+  }
 }

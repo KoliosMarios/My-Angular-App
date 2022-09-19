@@ -14,5 +14,6 @@
   <div *ngFor="let todo of todos; let i = index" class="todo">
     <div class="id">{{ i }}</div>
     <div class="context">{{ todo.content }}</div>
+    <button class="delete" (click)="deleteTodo(i)">Remove</button>
   </div>
 </div>
