@@ -42,7 +42,14 @@ export class TodosComponent implements OnInit {
 
   // we pass the id of the item we want to delete
   deleteTodo(id: number) {
-    // we return only the todos that have different index than the id we pass in the function 
-    this.todos = this.todos.filter((todo, i) => i !== id);
+    this.todos.splice(id, 1);
+  }
+
+  toggleDone(id:number) {
+    this.todos.map((todo, i) => {
+      if(i === id) {
+        todo.completed = !todo.completed;
+      }
+    })
   }
 }
